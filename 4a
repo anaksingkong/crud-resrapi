@@ -1,0 +1,50 @@
+Soal Nomor 4
+Sebuah DB perpustakaan mempunyai 2 tabel sebagai berikut:
+categories
+
+    id
+    name
+
+books
+
+    id
+    name
+    stok
+    image
+    deskripsi
+    category_id(FK categories.id)
+
+Isikan data relevan sesuai dengan tabel db yang telah dibuat!
+
+DONE
+
+Mohon:
+Buatlah query DB/MYSQL untuk menampilkan data sebagai berikut :
+
+    Tampilkan hasil dari query sebagai berikut :
+    tampilkan semua buku
+    Jawab:
+    SELECT * FROM `books`;
+    
+    tampilkan produk per kategori, field ditampilkan nama kategori, nama buku, stock
+    Jawab: 
+    SELECT categories.name, books.name, books.stock
+	FROM books
+	JOIN categories ON books.id=categories.id;
+	
+    tampilak detail buku berdasarkan id
+    Jawab:
+    SELECT deskripsi FROM books WHERE id_books
+    SELECT buku_id, deskripsi FROM books
+    
+    Tampilkan hasil query post tambah buku dan Kategori
+    Jawab Tambah buku:
+    INSERT INTO `books` (`id_books`, `name`, `stock`, `deskripsi`, `category_id`) VALUES (NULL, 'Bintang', '5', 'Author Tere Liye', '1') 
+    
+    INSERT INTO `books` (`buku_id`, `judul_buku`, `stock`, `deskripsi`, `category_id`) VALUES (NULL, 'UUD 1945 Rekapitulasi', '5', 'Author Siregar', '2'), (NULL, 'Pasal KDRT', '5', 'Author Maitimo', '2') 
+
+
+    Jawab Tambah kategori:
+    INSERT INTO `categories` (`id_category`, `name`) VALUES (NULL, "Interior"); 
+
+
